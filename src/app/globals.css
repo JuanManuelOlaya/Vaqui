@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/*
+  Identidad de VAQUI según el Acta de Constitución.
+  Handy Casual se usa solo en el logo, que va como SVG, no como fuente web.
+  Poppins es la tipografía funcional de toda la interfaz.
+*/
+@theme {
+  --color-tinta: #263a58;        /* azul corporativo: texto y superficies oscuras */
+  --color-tinta-suave: #4a5b76;  /* texto secundario */
+  --color-chispa: #572bff;       /* morado corporativo: acciones */
+  --color-chispa-tenue: #ede9ff; /* fondo de énfasis */
+  --color-papel: #fbfbfd;        /* fondo de la aplicación */
+  --color-alerta: #c0392b;
+
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-papel);
+  color: var(--color-tinta);
+}
+
+/* Accesibilidad: el foco del teclado siempre visible. */
+:focus-visible {
+  outline: 2px solid var(--color-chispa);
+  outline-offset: 2px;
+}
